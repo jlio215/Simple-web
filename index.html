@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="restaurants.js"></script>
+    <title>Directory</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-main">
+            <div>
+                <img src="logo.svg"  alt="">
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="#">Directory</a>
+                </li>
+                <li>
+                    <a href="#">Restaurants</a>
+                </li>
+                <li>
+                    <a href="#">Search</a>
+                </li>
+                <li>
+                    <a href="new.html">New</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id="container">
+    </div>
+    <script>
+        console.log(restaurants)
+  var restaurantsContainer = document.getElementById("container");
+
+  // Recorrer el arreglo de restaurants
+  for (var i = 0; i < restaurants.length; i++) {
+    var restaurant = restaurants[i];
+
+    // Generar el código HTML para cada restaurant
+    var restaurantHTML = `
+        <div class="card">
+            <img src="${restaurant.imagen}" alt="">
+            <div class="card-container">
+                <h4>${restaurant.nombre}</h4>
+                <p>${restaurant.direccion}</p>
+                <p>${restaurant.tipoComida}</p>
+                <button>More</button>
+            </div>
+        </div>
+    `;
+
+    // Agregar el restaurant al contenedor
+    restaurantsContainer.innerHTML += restaurantHTML;
+  }
+</script>
+
+    </script>
+
+</body>
+</html>
