@@ -38,14 +38,49 @@
             </div>
         </div>
     </nav>
-    <form style="position: relative; left: 20px; display: table-caption;">
-        <label for="">Name:<input type="text"></label>
-        <label for="">Description:<input type="number"></label>
-        <label for="">Address:<input type="text"></label>
-        <label for="">Image URL:<input type="text"></label>
-        <button style="margin-top: 20px;" class="btn btn-primary" type="submit">Create Restaurant</button>
-    </form>
+    <div class="container" style="align-items: center;">
+        <form id="myForm">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Name:</label>
+              <input id="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+              <p id="error1" style="color: red;">Especifica un nombre</p>
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Description:</label>
+              <input id="Description" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Description">
+              <p id="error2" style="color: red;">Especifica una descripcion</p>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Address:</label>
+                <input id="Address" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Address">
+                <p id="error3" style="color: red;">Especifica una Address</p>
+              </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Image URL:</label>
+              <input id="Image" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Image URL">
+              <p id="error4" style="color: red;">Especifica una Image URL</p>
+            </div>
+            <button style="margin-top: 20px;" class="btn btn-primary" type="submit">Create Restaurant</button>
+
+          </form>
+    </div>
+    <style>
+        #myForm{
+            display: block;
+        }
+
+        #error1,#error2, #error3, #error4{
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+    </style>   
      <!-- Incluir Bootstrap JS y dependencias -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="./js/formValidators.js"></script>
 </body>
 </html>
